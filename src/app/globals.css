@@ -6,8 +6,8 @@
 
 @theme {
   --font-sans: var(--font-rubik);
-  --color-primary: hsl(224 76% 59%);
-  --color-secondary: hsl(60 2% 13%);
+  --color-primary: #4A69E2;
+  --color-secondary: #232321;
 }
 
 :root {

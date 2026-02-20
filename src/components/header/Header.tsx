@@ -7,6 +7,7 @@ import DesktopNav from './DesktopNav'
 import Container from '../shared/Container'
 import Image from 'next/image'
 import { logo } from '@/src/assets/images'
+import Link from 'next/link'
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -46,9 +47,11 @@ export default function Header() {
                 <div className="hidden md:flex items-center justify-between px-8 py-5">
                     <DesktopNav />
 
+                    <Link href="/">
                     <div className="flex items-center gap-2 ">
                         <Image className='w-32' src={logo} alt='logo' width={300} height={300} />
                     </div>
+                    </Link>
 
                     <div className="flex items-center gap-6">
                         <button className="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
