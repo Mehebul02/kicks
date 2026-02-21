@@ -33,7 +33,7 @@ const products = [
 const Products = () => {
     
     return (
-       <section className="w-full bg-background px-4 md:px-8 ">
+       <section className="w-full bg-background px-4 md:px-8 mb-8 lg:mb-24">
            
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12">
                 <h2 className="text-2xl md:text-5xl lg:text-7xl font-black text-secondary leading-tight max-w-2xl">

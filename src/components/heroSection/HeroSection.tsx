@@ -13,7 +13,7 @@ export function HeroSection() {
 
       {/* Headline */}
       <div className="mb-6">
-        <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[223.5px] font-bold leading-none tracking-tight text-center">
+        <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[223.5px] font-bold  text-center">
           <span className="text-secondary">DO IT </span>
           <span className="text-primary">RIGHT</span>
         </h1>

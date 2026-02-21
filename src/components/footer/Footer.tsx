@@ -4,7 +4,7 @@ import Container from '../shared/Container'
 import Newsletter from './Newsletter'
 import FooterMenu from './FooterMenu'
 
-export function Footer() {
+const Footer = () => {
   const [email, setEmail] = useState('')
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,5 +25,7 @@ export function Footer() {
       </div>
 
     </Container>
-  )
-}
+  );
+};
+
+export default Footer;
