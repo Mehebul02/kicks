@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "../redux/ReduxProvider";
 import Header from "../components/header/Header";
+import { Footer } from "../components/footer/Footer";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -22,10 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={rubik.variable}>
-      <body className="font-sans bg-[#E7E7E3] text-foreground antialiased">
+      <body className="font-sans bg-[#E7E7E3] text-foreground antialiased"
+      data-new-gr-c-s-check-loaded="14.1274.0"
+      data-gr-ext-installed=""
+      >
         <ReduxProvider>
           <Header />
           {children}
+          <Footer/>
         </ReduxProvider>
       </body>
     </html>
