@@ -5,6 +5,7 @@ import Container from '../shared/Container';
 import { bannerImg1 } from '@/src/assets/images';
 import CategoryCard from './CategoryCard';
 import NavigationButton from './NavigationButton';
+import SectionTitle from '../shared/SectionTitle';
 
 const categories = [
     {
@@ -49,10 +50,10 @@ const Categories = () => {
             {/* Header */}
             <Container className='pt-6'>
                 <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-[24px] lg:text-[74px] font-semibold text-white tracking-wider">CATEGORIES</h2>
+                    <SectionTitle className='text-white'>CATEGORIES</SectionTitle>
 
                     {/* Navigation Buttons */}
-                   <NavigationButton handlePrevious={handlePrevious} handleNext={handleNext} />
+                    <NavigationButton handlePrevious={handlePrevious} handleNext={handleNext} />
                 </div>
             </Container>
 
