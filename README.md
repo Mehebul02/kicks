@@ -17,7 +17,7 @@ A modern e-commerce web application for sneakers built with **Next.js**, **Tailw
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Framework:** Next.js  (App Router)
 - **Language:** TypeScript
