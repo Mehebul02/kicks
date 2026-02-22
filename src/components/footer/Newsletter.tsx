@@ -19,7 +19,7 @@ const Newsletter = ({ email, setEmail, handleSubmit }: NewsletterProps) => {
             Sign up for free! Join the community.
             </p>
             
-            <form onSubmit={handleSubmit} className="flex gap-2 w-[320px] lg:w-[510px]">
+            <form onSubmit={handleSubmit} className="flex gap-2 w-[300px] lg:w-[510px]">
               <input
                 type="email"
                 placeholder="Email address"
@@ -30,7 +30,7 @@ const Newsletter = ({ email, setEmail, handleSubmit }: NewsletterProps) => {
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-secondary text-white font-black rounded-lg hover:opacity-90 transition-opacity cursor-pointer"
+                className="px-4 lg:px-6 py-2 lg:py-3 text-[14px] bg-secondary text-white font-medium rounded-lg hover:opacity-90 transition-opacity cursor-pointer"
               >
                 SUBMIT
               </button>

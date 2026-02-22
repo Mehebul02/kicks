@@ -27,7 +27,7 @@ const CategoryCard = ({
                 className="p-8 flex flex-col justify-between hover:shadow-lg  cursor-pointer"
             >
                 <div className="flex-1 flex items-center justify-center mb-6">
-                    <div className="relative  w-[600px] h-[500px] rounded-2xl">
+                    <div className="relative w-[300px] h-[300px] lg:w-[600px] lg:h-[500px] rounded-2xl">
                         <Image
                             src={category.image}
                             alt={category.name}

@@ -62,7 +62,7 @@ const OrderSummary = ({
       </div>
 
       <Button
-        className="w-full bg-black text-white hover:bg-gray-800 font-semibold py-2 rounded-lg mb-4"
+        className="w-full bg-black text-white hover:bg-gray-800 font-semibold py-2 rounded-lg mb-4 cursor-pointer"
         onClick={onCheckout}
       >
         CHECKOUT
