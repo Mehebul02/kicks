@@ -30,7 +30,8 @@ const ProductDetails = () => {
     try {
       const cartItem: any = {
         id: data.id,
-        name: data.name,
+        title: data.title,
+        description: data.description,
         image: data.images[0],
         price: data.price,
         size: selectedSize,

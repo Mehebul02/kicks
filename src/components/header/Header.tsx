@@ -13,9 +13,9 @@ import { useSelector } from 'react-redux'
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const cartItems = useSelector((state: any) => state.cart.items);
-  const totalQuantity = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
-  console.log("Add to cart item=====>",cartItems)
+    const cartItems = useSelector((state: any) => state.cart.items);
+    const totalQuantity = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
+
     return (
         <Container>
             <header className="bg-white rounded-[24px] mt-5 sticky top-0">
@@ -32,17 +32,21 @@ export default function Header() {
                         )}
                     </button>
 
-                    <div className="flex items-center gap-2 ">
-                        <Image className='w-24' src={logo} alt='logo' width={300} height={300} />
-                    </div>
+                    <Link href='/'>
+                        <div className="flex items-center gap-2 ">
+                            <Image className='w-24' src={logo} alt='logo' width={300} height={300} />
+                        </div>
+                    </Link>
 
                     <div className="flex items-center gap-2">
                         <button className="p-2 hover:bg-gray-100 rounded-lg">
                             <User className="w-6 h-6" />
                         </button>
-                        <button className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold">
-                            0
-                        </button>
+                        <Link href="/cart">
+                            <button className="bg-orange-500 cursor-pointer text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold">
+                                {totalQuantity}
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -52,9 +56,9 @@ export default function Header() {
                     <DesktopNav />
 
                     <Link href="/">
-                    <div className="flex items-center gap-2 ">
-                        <Image className='w-32' src={logo} alt='logo' width={300} height={300} />
-                    </div>
+                        <div className="flex items-center gap-2 ">
+                            <Image className='w-32' src={logo} alt='logo' width={300} height={300} />
+                        </div>
                     </Link>
 
                     <div className="flex items-center gap-6">
@@ -64,9 +68,11 @@ export default function Header() {
                         <button className="p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
                             <User className="w-6 h-6" />
                         </button>
-                        <button className="bg-orange-500 text-white rounded-full w-10 h-10 cursor-pointer flex items-center justify-center text-sm font-semibold">
-                            {totalQuantity}
-                        </button>
+                        <Link href="/cart">
+                            <button className="bg-orange-500 text-white rounded-full w-10 h-10 cursor-pointer flex items-center justify-center text-sm font-semibold">
+                                {totalQuantity}
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </header>

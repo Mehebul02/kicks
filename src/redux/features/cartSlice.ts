@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CartItem {
-  id: string;
-  title: string;
+export interface CartItem {
+  id: number;
+  title?: string;
   price: number;
-  image: any;
+  image: string;
   size: string;
   color: string;
   quantity: number;
@@ -32,13 +31,26 @@ const cartSlice = createSlice({
       );
 
       if (existingItem) {
-        existingItem.quantity += 1;
+        existingItem.quantity += action.payload.quantity || 1;
       } else {
-        state.items.push({ ...action.payload, quantity: 1 });
+        state.items.push({ ...action.payload });
       }
+    },
+
+    removeFromCart: (state, action: PayloadAction<{ id: number; size: string; color: string }>) => {
+      state.items = state.items.filter(
+        (item) =>
+          !(item.id === action.payload.id &&
+            item.size === action.payload.size &&
+            item.color === action.payload.color)
+      );
+    },
+
+    clearCart: (state) => {
+      state.items = [];
     },
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

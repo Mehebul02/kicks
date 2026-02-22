@@ -10,9 +10,10 @@ import { menuItems } from './menuData'
 
 interface Props {
   isOpen: boolean
+ 
 }
 
-export default function MobileNav({ isOpen }: Props) {
+export default function MobileNav({ isOpen, }: Props) {
   if (!isOpen) return null
 
   return (
