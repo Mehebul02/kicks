@@ -19,17 +19,14 @@ A modern e-commerce web application for sneakers built with **Next.js**, **Tailw
 
 ---
 # Clone the repository
-git clone https://github.com/Mehebul02/kicks.git
+Git clone https://github.com/Mehebul02/kicks.git
 
 # Navigate into the project
 cd kicks
 
 # Install dependencies
 npm install
-# or
-yarn install
 
 # Run the development server
 npm run dev
-# or
-yarn dev
+
