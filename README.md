@@ -5,7 +5,7 @@ Live Site: [kicks-umber.vercel.app](https://kicks-umber.vercel.app/)
 A modern e-commerce web application for sneakers built with **Next.js**, **Tailwind CSS**, **TypeScript**, and **shadcn/ui**. Users can browse, filter, and purchase sneakers with a sleek, responsive interface.
 
 ---
-# Features
+## Features
 -Next.js & TypeScript for fast, scalable, and type-safe web development.
 -Tailwind CSS for responsive and modern UI design.
 -shadcn/ui components for a polished user experience.
@@ -13,6 +13,7 @@ A modern e-commerce web application for sneakers built with **Next.js**, **Tailw
 -Cart System: Add/remove items and view order summary.
 -Responsive Design: Optimized for desktop, tablet, and mobile screens.
 -Dynamic Routing for product pages.
+
 
 ---
 
