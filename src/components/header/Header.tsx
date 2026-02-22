@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { useState } from 'react'
@@ -8,10 +9,13 @@ import Container from '../shared/Container'
 import Image from 'next/image'
 import { logo } from '@/src/assets/images'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
+  const cartItems = useSelector((state: any) => state.cart.items);
+  const totalQuantity = cartItems.reduce((total: number, item: any) => total + item.quantity, 0);
+  console.log("Add to cart item=====>",cartItems)
     return (
         <Container>
             <header className="bg-white rounded-[24px] mt-5 sticky top-0">
@@ -61,7 +65,7 @@ export default function Header() {
                             <User className="w-6 h-6" />
                         </button>
                         <button className="bg-orange-500 text-white rounded-full w-10 h-10 cursor-pointer flex items-center justify-center text-sm font-semibold">
-                            0
+                            {totalQuantity}
                         </button>
                     </div>
                 </div>

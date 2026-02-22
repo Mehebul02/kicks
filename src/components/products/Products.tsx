@@ -1,36 +1,13 @@
 
-import { bannerImg1 } from '@/src/assets/images'
 import CustomButton from '../shared/CustomButton'
 import ProductCard from './ProductCard'
-
-const products = [
-    {
-        id: 1,
-        name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES',
-        price: 125,
-        image: bannerImg1,
-    },
-    {
-        id: 2,
-        name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES',
-        price: 125,
-        image: bannerImg1,
-    },
-    {
-        id: 3,
-        name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES',
-        price: 125,
-        image: bannerImg1,
-    },
-    {
-        id: 4,
-        name: 'ADIDAS 4DFWD X PARLEY RUNNING SHOES',
-        price: 125,
-        image: bannerImg1,
-    },
-]
-
+import { useGetProductsQuery } from '@/src/redux/api/productApi';
+import { Product } from '@/src/types/product';
+import Loading from '../shared/Loading';
 const Products = () => {
+    const {data,isLoading} = useGetProductsQuery({})
+
+    if(isLoading) return <div><Loading/></div>
     
     return (
        <section className="w-full bg-background px-4 md:px-8 mb-8 lg:mb-24">
@@ -43,7 +20,7 @@ const Products = () => {
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {products.map((product) => <ProductCard key={product.id} product={product}/>)}
+                {data?.slice(0,8)?.map((product:Product) => <ProductCard key={product.id} product={product}/>)}
             </div>
         </section>
     );
