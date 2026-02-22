@@ -6,13 +6,13 @@ A modern e-commerce web application for sneakers built with **Next.js**, **Tailw
 
 ---
 ## Features
--Next.js & TypeScript for fast, scalable, and type-safe web development.
--Tailwind CSS for responsive and modern UI design.
--shadcn/ui components for a polished user experience.
--Product Listing & Details: Browse sneakers with images, prices, and descriptions.
--Cart System: Add/remove items and view order summary.
--Responsive Design: Optimized for desktop, tablet, and mobile screens.
--Dynamic Routing for product pages.
+- Next.js & TypeScript for fast, scalable, and type-safe web development.
+- Tailwind CSS for responsive and modern UI design.
+- shadcn/ui components for a polished user experience.
+- Product Listing & Details: Browse sneakers with images, prices, and descriptions.
+- Cart System: Add/remove items and view order summary.
+- Responsive Design: Optimized for desktop, tablet, and mobile screens.
+- Dynamic Routing for product pages.
 
 
 ---
